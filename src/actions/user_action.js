@@ -14,8 +14,6 @@ export const USER_UNREGISTER = 'USER_UNREGISTER';
 // 리턴값으로 액션 객체 // 비동기 작업은 여기서
 
 export function userLogin(body) {
-  // server에서 받은 데이터를 request라는 변수에 저장 (서버에서 가져온 모든 데이터)
-  // dataToSubmit은 body 부분 (post 요청 시에만 인자를 넣어주면 됨)
   const request = axios
     .post(API.USER_LOGIN, body, { withCredentials: true }) //
     .then((res) => res.data);

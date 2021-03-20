@@ -39,6 +39,7 @@ function Login(props) {
     dispatch(userLogin(body))
       .then((res) => {
         if (res.payload.login) {
+          console.log(res.payload);
           props.history.push('/');
         }
       })
